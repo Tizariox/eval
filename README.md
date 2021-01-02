@@ -10,7 +10,7 @@ all the products in the parentheses, evaluates them, and then find the addition 
 ensure that all parentheses are calculated before products, which are calculated before addition and subtraction. 
 
 Syntax:
-'+' for addition
-'-' for subtraction
-'*' for multiplication
-'()' for parentheses
+'+' for addition  
+'-' for subtraction  
+'*' for multiplication  
+'()' for parentheses  
