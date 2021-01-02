@@ -1,5 +1,5 @@
 # eval
-Arithmetic Expression Evaluator -- Alan Zhong
+Arithmetic Expression Evaluator -- Alan Zhong  
 
 This C++ program parses an input string and evaluates the arithmetic expression that it contains according to the order
 of operations; this is similar to an eval() function in other programming languages. However, this program only accepts
@@ -9,7 +9,7 @@ It works by descending down the order of operations––it finds all parenthese
 all the products in the parentheses, evaluates them, and then find the addition and subtraction, and evaluates them. This will
 ensure that all parentheses are calculated before products, which are calculated before addition and subtraction. 
 
-Syntax:
+Syntax:  
 '+' for addition  
 '-' for subtraction  
 '*' for multiplication  
