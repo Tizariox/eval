@@ -30,9 +30,7 @@ string evalPart(string str, int i, char operation1, char operation2) { // for sw
     for (int j = i + 1; j < str.length(); j++) {
 		if (str[j] == ')') { // stopping point; if the character we're looking at is the end of the parentheses then we stop and repeat for the next parentheses
 			return str;
-		} else if (j != str.length() - 1 && str[j] == '+' && str[j + 1] == '-') { // the program can't interpret adding or
-																					// subtracting a negative number, so these two if
-																					// statements are just here to replace +- with - and -- with +
+		} else if (j != str.length() - 1 && str[j] == '+' && str[j + 1] == '-') { // the program can't interpret adding or subtracting a negative number																	// statements are just here to replace +- with - and -- with +
 			str = str.substr(0, j) + "-" + str.substr(j + 2, str.length() - j - 2);
 			j--; // pushing j back to account for the +- being turned into -
 		} else if (j != str.length() - 1 && str[j] == '-' && str[j + 1] == '-') {
@@ -47,11 +45,11 @@ string evalPart(string str, int i, char operation1, char operation2) { // for sw
 			// finding the number to the left of the operation
             for (int k = j - 1; k > 0; k--) {
                 if (!isdigit(str[k])) {
-					if (k == i + 1) { // if the left number is negative (this only happens when it's right next to the left parentheses because we take care of +- and --)
-						leftNum *= -1;
-						leftNumSize++;
-					}
-					break;
+			if (k == i + 1) { // if the left number is negative (this only happens when it's right next to the left parentheses because we take care of +- and --)
+				leftNum *= -1;
+				leftNumSize++;
+			}
+			break;
                 } else {
 					// constructing the number, digit by digit
                     leftNum += stoi(string(1, str[k])) * pow(10, j - 1 - k);
@@ -95,11 +93,11 @@ string evalPart(string str, int i, char operation1, char operation2) { // for sw
             int rightNumSize = 0;
             for (int k = j - 1; k > 0; k--) {
                 if (!isdigit(str[k])) {
-					if (k == i + 1) {
-						leftNum *= -1;
-						leftNumSize++;
-					}
-                    break;
+			if (k == i + 1) {
+			leftNum *= -1;
+			leftNumSize++;
+			}
+                break;
                 } else {
                     leftNum += stoi(string(1, str[k])) * pow(10, j - 1 - k);
                     leftNumSize++;
